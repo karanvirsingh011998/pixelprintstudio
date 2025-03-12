@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+Disallow: /dashboard
+
+# Host
+Host: https://www.pixelprintstudios.in
+
+# Sitemaps
+Sitemap: https://www.pixelprintstudios.in/sitemap.xml
