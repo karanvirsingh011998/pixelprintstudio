@@ -7,9 +7,13 @@ import { Printer, Gift, Star, MapPin, Phone, Mail, ChevronLeft, ChevronRight } f
 import Image from 'next/image';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 import WhatsappButton from '@/components/WhatsappContact';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [currentChooseUs, setCurrentChooseUs] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const whyChooseUs = [
     "High-quality prints",
     "Affordable pricing",
@@ -76,6 +80,7 @@ export default function Home() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-[#DD087F] to-[#008ED6] hover:opacity-90 transition-all duration-300"
+              onClick={() => setIsModalOpen(true)}
             >
               Get Started
             </Button>
@@ -83,6 +88,30 @@ export default function Home() {
         </div>
         <ThemeSwitcher />
       </section>
+
+      {/* Coming Soon Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl p-6 rounded-2xl max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-semibold text-center text-white">🚀 Coming Soon!</DialogTitle>
+          </DialogHeader>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-center text-white"
+          >
+            <p className="text-lg">We’re working on something amazing. Stay tuned! 🎨✨</p>
+            <Button
+              className="mt-4 bg-gradient-to-r from-[#DD087F] to-[#008ED6] hover:opacity-90 transition-all duration-300"
+              onClick={() => setIsModalOpen(false)}
+            >
+              Close
+            </Button>
+          </motion.div>
+        </DialogContent>
+      </Dialog>
 
       {/* Services Section */}
       <section className="py-20 bg-muted/50">
