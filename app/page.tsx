@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Printer, Gift, Star, MapPin, Phone, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
+import WhatsappButton from '@/components/WhatsappContact';
 
 export default function Home() {
   const [currentChooseUs, setCurrentChooseUs] = useState(0);
@@ -246,6 +247,8 @@ export default function Home() {
         </div>
       </section> */}
       <footer className='text-center py-8 border-t-4'>
+
+        <WhatsappButton />
         © 2025 Pixel Print Studios. All rights reserved.
       </footer>
     </div>
