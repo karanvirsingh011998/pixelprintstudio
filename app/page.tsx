@@ -3,12 +3,19 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { useTheme } from 'next-themes';
-import { Sun, Moon, Printer, Gift, Star, MapPin, Phone, Mail } from 'lucide-react';
+import { Printer, Gift, Star, MapPin, Phone, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
+  const [currentChooseUs, setCurrentChooseUs] = useState(0);
+  const whyChooseUs = [
+    "High-quality prints",
+    "Affordable pricing",
+    "Eco-friendly materials",
+    "Custom design support",
+    "Fast turnaround times"
+  ];
   // const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   // const testimonials = [
@@ -57,7 +64,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801] opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
-            <Image src="/assets/images/logo.png" alt="Logo" width={100} height={100} className="mx-auto"  />
+            <Image src="/assets/images/logo.png" alt="Logo" width={100} height={100} className="mx-auto" />
 
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801]">
               Pixel Print Studios
@@ -65,22 +72,15 @@ export default function Home() {
             <p className="text-xl md:text-2xl mb-8 bg-gradient-to-r from-[#DD087F] to-[#008ED6] text-transparent bg-clip-text">
               Ink Your Imagination
             </p>
-            {/* <Button
+            <Button
               size="lg"
               className="bg-gradient-to-r from-[#DD087F] to-[#008ED6] hover:opacity-90 transition-all duration-300"
             >
               Get Started
-            </Button> */}
+            </Button>
           </div>
         </div>
-        <Button
-          variant="outline"
-          size="icon"
-          className="fixed top-4 right-4 z-50"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-        </Button>
+        <ThemeSwitcher />
       </section>
 
       {/* Services Section */}
@@ -119,6 +119,33 @@ export default function Home() {
           </div>
         </div>
       </section> */}
+
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">Why Choose Us?</h2>
+          <div className="relative max-w-3xl mx-auto">
+            <div className="flex items-center gap-8">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setCurrentChooseUs((prev) => (prev === 0 ? whyChooseUs.length - 1 : prev - 1))}
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </Button>
+              <Card className="flex-1 p-8">
+                <p className="text-lg italic text-center">{whyChooseUs[currentChooseUs]}</p>
+              </Card>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setCurrentChooseUs((prev) => (prev === whyChooseUs.length - 1 ? 0 : prev + 1))}
+              >
+                <ChevronRight className="h-6 w-6" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       {/* <section className="py-20 bg-muted/50">
@@ -218,6 +245,9 @@ export default function Home() {
           </Card>
         </div>
       </section> */}
+      <footer className='text-center py-8 border-t-4'>
+        © 2025 Pixel Print Studios. All rights reserved.
+      </footer>
     </div>
   );
 }
