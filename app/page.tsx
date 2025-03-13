@@ -262,8 +262,15 @@ export default function Home() {
             </div>
 
             {/* Google Maps Embed */}
-            <div className="w-full h-80 md:h-full">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214.4095892633858!2d76.79598947364369!3d30.702838486789187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed41e45d0ea3%3A0x4ce50a6db2fdd0b3!2sPixel%20Print%20Studios!5e0!3m2!1sen!2sin!4v1741853827066!5m2!1sen!2sin" width="600" height="450" loading="lazy"></iframe> </div>
+            <div className="w-full h-80 md:h-full relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214.4095892633858!2d76.79598947364369!3d30.702838486789187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed41e45d0ea3%3A0x4ce50a6db2fdd0b3!2sPixel%20Print%20Studios!5e0!3m2!1sen!2sin!4v1741853827066!5m2!1sen!2sin"
+                className="absolute top-0 left-0 w-full h-full"
+                loading="lazy"
+                style={{ border: 0 }}
+              />
+            </div>
+
           </div>
         </div>
       </section>
