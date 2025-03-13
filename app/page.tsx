@@ -101,6 +101,84 @@ export default function Home() {
         </DialogContent>
       </Dialog>
 
+      {/* Popular Products Section */}
+      {/* <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Popular Products</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Business Cards',
+                image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'Best Seller',
+              },
+              {
+                title: 'Custom Mugs',
+                image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'New',
+              },
+              {
+                title: 'Brochures',
+                image: 'https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'Popular',
+              },
+              {
+                title: 'Custom T-Shirts',
+                image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'Featured',
+              },
+              {
+                title: 'Business Cards',
+                image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'Best Seller',
+              },
+              {
+                title: 'Custom Mugs',
+                image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'New',
+              },
+              {
+                title: 'Brochures',
+                image: 'https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'Popular',
+              },
+              {
+                title: 'Custom T-Shirts',
+                image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&q=80',
+                price: 'Starting from Rs.500',
+                badge: 'Featured',
+              },
+            ].map((product, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className="relative h-48">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <Badge className="absolute top-2 right-2">{product.badge}</Badge>
+                </div>
+                <CardContent className="p-4">
+                  <h3 className="font-semibold mb-2">{product.title}</h3>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold">{product.price}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+
       {/* Services Section */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">

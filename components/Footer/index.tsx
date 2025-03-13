@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaFacebookF, FaInstagram, FaArrowUp, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaArrowUp, FaLinkedinIn, FaEnvelope, FaYoutube, FaGoogle } from "react-icons/fa";
 import { Card } from "@/components/ui/card";
 
 const Footer = () => {
@@ -16,25 +16,28 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div className="flex justify-center gap-6 mt-4">
-          {[
-            { icon: <FaFacebookF size={18} />, link: "https://facebook.com" },
-            { icon: <FaInstagram size={18} />, link: "https://instagram.com" },
-            { icon: <FaLinkedinIn size={18} />, link: "https://linkedin.com" },
-            { icon: <FaEnvelope size={18} />, link: "mailto:pixelprintstudios7@gmail.com" }
-          ].map(({ icon, link }, index) => (
-            <motion.a
-              key={index}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/30 transition"
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {icon}
-            </motion.a>
-          ))}
-        </div>
+  {[
+    { icon: <FaFacebookF size={18} />, link: "https://www.facebook.com/profile.php?id=61559305701688&mibextid=ZbWKwL" },
+    { icon: <FaInstagram size={18} />, link: "https://www.instagram.com/pixelprintstudios7/" },
+    { icon: <FaLinkedinIn size={18} />, link: "https://www.linkedin.com/in/pixel-print-studios/" },
+    { icon: <FaYoutube size={18} />, link: "https://www.youtube.com/@PixelPrintStudios" },
+    { icon: <FaEnvelope size={18} />, link: "mailto:pixelprintstudios7@gmail.com" },
+    { icon: <FaGoogle size={18} />, link: "https://g.co/kgs/5U6sJAH" }
+  ].map(({ icon, link }, index) => (
+    <motion.a
+      key={index}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/30 transition"
+      whileHover={{ scale: 1.2, rotate: 5 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      {icon}
+    </motion.a>
+  ))}
+</div>
+
 
         {/* Back to Top Button with Infinite Animation */}
         <motion.button
