@@ -9,6 +9,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher';
 import WhatsappButton from '@/components/WhatsappContact';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
+import HamburgerMenu from '@/components/Hamburger';
 
 export default function Home() {
   const [currentChooseUs, setCurrentChooseUs] = useState(0);
@@ -86,6 +87,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
+        <HamburgerMenu />
         <ThemeSwitcher />
       </section>
 
