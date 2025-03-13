@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Typewriter from 'typewriter-effect';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Printer, Gift, Star, MapPin, Phone, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -9,6 +10,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher';
 import WhatsappButton from '@/components/WhatsappContact';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [currentChooseUs, setCurrentChooseUs] = useState(0);
@@ -21,28 +23,6 @@ export default function Home() {
     "Custom design support",
     "Fast turnaround times"
   ];
-  // const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  // const testimonials = [
-  //   {
-  //     name: "Sarah Johnson",
-  //     role: "Marketing Director",
-  //     text: "Pixel Print Studios delivered exceptional quality for our corporate branding materials. Their attention to detail is unmatched!",
-  //     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
-  //   },
-  //   {
-  //     name: "Michael Chen",
-  //     role: "CEO",
-  //     text: "The team went above and beyond our expectations. Their creative solutions helped us stand out in our industry.",
-  //     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop"
-  //   },
-  //   {
-  //     name: "Emily Rodriguez",
-  //     role: "Design Lead",
-  //     text: "Working with Pixel Print Studios has been a game-changer for our business. Their innovative approach sets them apart.",
-  //     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop"
-  //   }
-  // ];
 
   const services = [
     {
@@ -75,7 +55,15 @@ export default function Home() {
               Pixel Print Studios
             </h1>
             <p className="text-xl md:text-2xl mb-8 bg-gradient-to-r from-[#DD087F] to-[#008ED6] text-transparent bg-clip-text">
-              Ink Your Imagination
+              <Typewriter
+                options={{
+                  strings: ["Ink Your Imagination"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 100,
+                  deleteSpeed: 50,
+                }}
+              />
             </p>
             <Button
               size="lg"
@@ -129,27 +117,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Section */}
-      {/* <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Featured Products</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <Card key={item} className="overflow-hidden group">
-                <div className="relative h-64">
-                  <Image
-                    src={`https://images.unsplash.com/photo-${item + 500}?w=500&h=300&fit=crop`}
-                    alt={`Product ${item}`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Why Choose Us?</h2>
@@ -177,109 +144,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      {/* <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">What Our Clients Say</h2>
-          <div className="relative max-w-3xl mx-auto">
-            <div className="flex items-center gap-8">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </Button>
-              <Card className="flex-1 p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <Image
-                    src={testimonials[currentTestimonial].image}
-                    alt={testimonials[currentTestimonial].name}
-                    width={60}
-                    height={60}
-                    className="rounded-full"
-                  />
-                  <div>
-                    <h4 className="font-semibold">{testimonials[currentTestimonial].name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonials[currentTestimonial].role}</p>
-                  </div>
-                </div>
-                <p className="text-lg italic">{testimonials[currentTestimonial].text}</p>
-              </Card>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-              >
-                <ChevronRight className="h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Contact Us</h2>
-          <div className="max-w-2xl mx-auto">
-            <div className="grid gap-8">
-              <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-center gap-4 mb-4">
-                  <Mail className="h-6 w-6 text-[#DD087F]" />
-                  <div>
-                    <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">pixelprintstudios7@gmail.com</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Contact Information */}
+            <div className="max-w-2xl mx-auto">
+              <Card className="p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <Mail className="h-6 w-6 text-[#DD087F]" />
+                    <div>
+                      <h3 className="font-semibold">Email</h3>
+                      <p className="text-muted-foreground">
+                        pixelprintstudios7@gmail.com
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4 mb-4">
-                  <Phone className="h-6 w-6 text-[#008ED6]" />
-                  <div>
-                    <h3 className="font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">+91 9815695007</p>
+                  <div className="flex items-center gap-4">
+                    <Phone className="h-6 w-6 text-[#008ED6]" />
+                    <div>
+                      <h3 className="font-semibold">Phone</h3>
+                      <p className="text-muted-foreground">+91 9815695007</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <MapPin className="h-6 w-6 text-[#FFE801]" />
-                  <div>
-                    <h3 className="font-semibold">Address</h3>
-                    <p className="text-muted-foreground">182/56, Industrial Area Phase 1</p>
-                    <p className="text-muted-foreground">Chandigarh, IN 160002</p>
+                  <div className="flex items-center gap-4">
+                    <MapPin className="h-6 w-6 text-[#FFE801]" />
+                    <div>
+                      <h3 className="font-semibold">Address</h3>
+                      <p className="text-muted-foreground">
+                        182/56, Industrial Area Phase 1
+                      </p>
+                      <p className="text-muted-foreground">Chandigarh, IN 160002</p>
+                    </div>
                   </div>
                 </div>
               </Card>
             </div>
+
+            {/* Google Maps Embed */}
+            <div className="w-full h-80 md:h-full">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.554690844469!2d76.79417907639095!3d30.702802974598782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fecec7153773d%3A0x84f627ea42b10157!2s182%2F56%2C%20Industrial%20Area%20Phase%20I%2C%20Chandigarh%2C%20160002!5e0!3m2!1sen!2sin!4v1741848068862!5m2!1sen!2sin" width="600" height="450" loading="lazy" className="w-full h-full"></iframe>
+            </div>
           </div>
         </div>
       </section>
-      {/* <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Get in Touch</h2>
-          <Card className="max-w-2xl mx-auto p-8">
-            <form className="space-y-6">
-              <div>
-                <Input placeholder="Your Name" />
-              </div>
-              <div>
-                <Input type="email" placeholder="Your Email" />
-              </div>
-              <div>
-                <Textarea placeholder="Your Message" className="min-h-[150px]" />
-              </div>
-              <Button
-                className="w-full bg-gradient-to-r from-[#DD087F] to-[#008ED6] hover:opacity-90 transition-all duration-300"
-              >
-                Send Message
-              </Button>
-            </form>
-          </Card>
-        </div>
-      </section> */}
-      <footer className='text-center py-8 border-t-4'>
 
-        <WhatsappButton />
-        © 2025 Pixel Print Studios. All rights reserved.
-      </footer>
+      <WhatsappButton />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
