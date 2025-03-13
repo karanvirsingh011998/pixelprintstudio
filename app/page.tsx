@@ -263,8 +263,7 @@ export default function Home() {
 
             {/* Google Maps Embed */}
             <div className="w-full h-80 md:h-full">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.554690844469!2d76.79417907639095!3d30.702802974598782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fecec7153773d%3A0x84f627ea42b10157!2s182%2F56%2C%20Industrial%20Area%20Phase%20I%2C%20Chandigarh%2C%20160002!5e0!3m2!1sen!2sin!4v1741848068862!5m2!1sen!2sin" width="600" height="450" loading="lazy" className="w-full h-full"></iframe>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214.4095892633858!2d76.79598947364369!3d30.702838486789187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed41e45d0ea3%3A0x4ce50a6db2fdd0b3!2sPixel%20Print%20Studios!5e0!3m2!1sen!2sin!4v1741853827066!5m2!1sen!2sin" width="600" height="450" loading="lazy"></iframe> </div>
           </div>
         </div>
       </section>
