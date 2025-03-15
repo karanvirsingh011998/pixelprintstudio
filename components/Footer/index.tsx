@@ -15,7 +15,7 @@ const Footer = () => {
         </p>
 
         {/* Social Media Links */}
-        <div className="flex justify-center gap-6 mt-4">
+        <div className="flex justify-center gap-2 sm:gap-6 mt-4">
   {[
     { icon: <FaFacebookF size={18} />, link: "https://www.facebook.com/profile.php?id=61559305701688&mibextid=ZbWKwL" },
     { icon: <FaInstagram size={18} />, link: "https://www.instagram.com/pixelprintstudios7/" },
