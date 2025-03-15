@@ -1,16 +1,58 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Typewriter from 'typewriter-effect';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Printer, Gift, Star, MapPin, Phone, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
-import WhatsappButton from '@/components/WhatsappContact';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { motion } from 'framer-motion';
-import Footer from '@/components/Footer';
+import { useState } from "react";
+import Typewriter from "typewriter-effect";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  Printer,
+  Gift,
+  Star,
+  MapPin,
+  Phone,
+  Mail,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import Image from "next/image";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import WhatsappButton from "@/components/WhatsappContact";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
+
+const faqs = [
+  {
+    question: "What types of printing do you offer?",
+    answer:
+      "We offer digital, offset, and large-format printing for various materials.",
+  },
+  {
+    question: "How fast is the turnaround?",
+    answer:
+      "Our standard turnaround is 2-5 business days depending on the project.",
+  },
+  {
+    question: "What is the minimum order quantity?",
+    answer:
+      "We don't have a strict minimum order quantity for most products. Whether you need just a few or hundreds, we can accommodate your needs!",
+  },
+  {
+    question: "Can I get a sample of my print before placing a full order?",
+    answer:
+      "Yes, we offer a sample service for most products. Please contact us to request a sample print before finalizing your order.",
+  },
+  {
+    question: "Can I get a custom design?",
+    answer:
+      "Yes! Our team can help design custom materials based on your needs.",
+  },
+];
 
 export default function Home() {
   const [currentChooseUs, setCurrentChooseUs] = useState(0);
@@ -21,7 +63,7 @@ export default function Home() {
     "Affordable pricing",
     "Eco-friendly materials",
     "Custom design support",
-    "Fast turnaround times"
+    "Fast turnaround times",
   ];
 
   const services = [
@@ -39,7 +81,7 @@ export default function Home() {
       title: "Custom Design",
       description: "Bespoke design services tailored to your brand",
       icon: <Star className="h-8 w-8" />,
-    }
+    },
   ];
 
   return (
@@ -49,7 +91,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801] opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
-            <Image src="/assets/images/logo.png" alt="Logo" width={100} height={100} className="mx-auto" />
+            <Image
+              src="/assets/images/logo.png"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="mx-auto"
+            />
 
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801]">
               Pixel Print Studios
@@ -81,7 +129,9 @@ export default function Home() {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl p-6 rounded-2xl max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-xl font-semibold text-center text-white">🚀 Coming Soon!</DialogTitle>
+            <DialogTitle className="text-xl font-semibold text-center text-white">
+              🚀 Coming Soon!
+            </DialogTitle>
           </DialogHeader>
 
           <motion.div
@@ -90,7 +140,9 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             className="text-center text-white"
           >
-            <p className="text-lg">We’re working on something amazing. Stay tuned! 🎨✨</p>
+            <p className="text-lg">
+              We’re working on something amazing. Stay tuned! 🎨✨
+            </p>
             <Button
               className="mt-4 bg-gradient-to-r from-[#DD087F] to-[#008ED6] hover:opacity-90 transition-all duration-300"
               onClick={() => setIsModalOpen(false)}
@@ -178,14 +230,16 @@ export default function Home() {
         </div>
       </section> */}
 
-
       {/* Services Section */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300">
+              <Card
+                key={index}
+                className="p-6 hover:shadow-lg transition-all duration-300"
+              >
                 <div className="text-[#DD087F] mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
@@ -197,23 +251,35 @@ export default function Home() {
 
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Why Choose Us?</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Why Choose Us?
+          </h2>
           <div className="relative max-w-3xl mx-auto">
             <div className="flex items-center gap-8">
               <Button
                 variant="outline"
                 size="icon"
-                onClick={() => setCurrentChooseUs((prev) => (prev === 0 ? whyChooseUs.length - 1 : prev - 1))}
+                onClick={() =>
+                  setCurrentChooseUs((prev) =>
+                    prev === 0 ? whyChooseUs.length - 1 : prev - 1
+                  )
+                }
               >
                 <ChevronLeft className="h-6 w-6" />
               </Button>
               <Card className="flex-1 p-8">
-                <p className="text-lg italic text-center">{whyChooseUs[currentChooseUs]}</p>
+                <p className="text-lg italic text-center">
+                  {whyChooseUs[currentChooseUs]}
+                </p>
               </Card>
               <Button
                 variant="outline"
                 size="icon"
-                onClick={() => setCurrentChooseUs((prev) => (prev === whyChooseUs.length - 1 ? 0 : prev + 1))}
+                onClick={() =>
+                  setCurrentChooseUs((prev) =>
+                    prev === whyChooseUs.length - 1 ? 0 : prev + 1
+                  )
+                }
               >
                 <ChevronRight className="h-6 w-6" />
               </Button>
@@ -254,7 +320,9 @@ export default function Home() {
                       <p className="text-muted-foreground">
                         182/56, Industrial Area Phase 1
                       </p>
-                      <p className="text-muted-foreground">Chandigarh, IN 160002</p>
+                      <p className="text-muted-foreground">
+                        Chandigarh, IN 160002
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -270,7 +338,22 @@ export default function Home() {
                 style={{ border: 0 }}
               />
             </div>
+          </div>
+        </div>
+      </section>
 
+      <section className="py-16 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-8">
+            {faqs.map((faq, index) => (
+              <div key={index} className="p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-semibold mb-4">{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
