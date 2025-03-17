@@ -343,52 +343,52 @@ export default function Home() {
       </section>
 
       <section className="py-20 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16">Special Offers & Discounts</h2>
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">Special Offers & Discounts</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
-          {/* Offer Card 1 */}
-          <Card className="bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold text-[#DD087F]">10% OFF Your First Order!</h3>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Sign up now and get 10% off your first print order. 
-                
-                {/* Use code: <span className="font-bold text-[#008ED6]">WELCOME10</span> */}
-              </p>
-              {/* <Button
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+            {/* Offer Card 1 */}
+            <Card className="bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold text-[#DD087F]">10% OFF Your First Order!</h3>
+                <p className="mt-4 text-lg text-muted-foreground">
+                  Get 10% off your first print order.
+
+                  {/* Use code: <span className="font-bold text-[#008ED6]">WELCOME10</span> */}
+                </p>
+                {/* <Button
                 size="lg"
                 className="mt-6 bg-gradient-to-r from-[#DD087F] to-[#008ED6] text-white hover:opacity-90 transition-all duration-300"
               >
                 Claim Your Offer
               </Button> */}
-            </div>
-          </Card>
+              </div>
+            </Card>
 
-          {/* Offer Card 2 */}
-          <Card className="bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold text-[#FFE801]">Bulk Order Discount</h3>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Ordering in bulk? Get up to 20% off on large orders.
-                 {/* Use code: <span className="font-bold text-[#DD087F]">BULK20</span> */}
-              </p>
-              {/* <Button
+            {/* Offer Card 2 */}
+            <Card className="bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold text-[#FFE801]">Bulk Order Discount</h3>
+                <p className="mt-4 text-lg text-muted-foreground">
+                  Ordering in bulk? Get up to 20% off on large orders.
+                  {/* Use code: <span className="font-bold text-[#DD087F]">BULK20</span> */}
+                </p>
+                {/* <Button
                 size="lg"
                 className="mt-6 bg-gradient-to-r from-[#FFE801] to-[#008ED6] text-white hover:opacity-90 transition-all duration-300"
               >
                 Order Now
               </Button> */}
-            </div>
-          </Card>
-        </div>
+              </div>
+            </Card>
+          </div>
 
-        {/* Limited-time Banner */}
-        <Card className="mt-4 bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+          {/* Limited-time Banner */}
+          <Card className="mt-4 bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="text-center">
               <h3 className="text-2xl font-semibold text-[#DD087F]">Limited Time Offer!</h3>
               <p className="mt-4 text-lg text-muted-foreground">
-              Get an additional 5% off on all orders above ₹2000. Hurry, offer ends soon!
+                Get an additional 5% off on all orders above ₹2000. Hurry, offer ends soon!
               </p>
               {/* <Button
                 size="lg"
@@ -398,8 +398,8 @@ export default function Home() {
               </Button> */}
             </div>
           </Card>
-      </div>
-    </section>
+        </div>
+      </section>
 
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
