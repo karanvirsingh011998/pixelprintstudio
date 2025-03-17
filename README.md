@@ -9,8 +9,8 @@ Welcome to **Pixel Print Studios** – your go-to destination for high-quality p
 
 ## 🛠️ Tech Stack
 - **Framework**: Next.js (React)
-- **Styling**: Tailwind CSS, Daisy UI
-- **Animations**: AOS / Framer Motion
+- **Styling**: Tailwind CSS, Shadcn
+- **Animations**: Framer Motion
 - **Hosting**: Vercel / Any preferred platform
 
 
