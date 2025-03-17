@@ -45,11 +45,6 @@ vercel
 ```
 Or configure deployment through **GitHub Actions** / **CI/CD pipeline**.
 
-## 📜 License
-This project is licensed under the MIT License.
-
----
-
 **Author:** Karanvir Singh  
 Portfolio: [Karanvir Singh](https://karanvirsingh011998.github.io/portfolio/)
 
