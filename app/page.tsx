@@ -99,10 +99,10 @@ export default function Home() {
               className="mx-auto"
             />
 
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801]">
+            <h1 className="text-4xl sm:text-8xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801]">
               Pixel Print Studios
             </h1>
-            <p className="text-xl md:text-2xl mb-8 bg-gradient-to-r from-[#DD087F] to-[#008ED6] text-transparent bg-clip-text">
+            <p className="text-xl md:text-2xl mb-4 bg-gradient-to-r from-[#DD087F] to-[#008ED6] text-transparent bg-clip-text">
               <Typewriter
                 options={{
                   strings: ["Ink Your Imagination"],
@@ -113,6 +113,11 @@ export default function Home() {
                 }}
               />
             </p>
+
+            <p className="text-sm sm:text-xl text-muted-foreground">
+              Looking for top-quality printing in Chandigarh? We’ve got you covered! At our printing service, we combine cutting-edge technology with expert craftsmanship to deliver flawless prints—whether it’s business cards, banners, or custom projects. No matter your needs, we ensure precision, quality, and complete satisfaction. Whether you're a business aiming to stand out or an individual with unique printing requirements, we bring your vision to life with unmatched expertise. Experience printing perfection with us—where your ideas meet exceptional quality!
+            </p>
+
             <Button
               size="lg"
               className="bg-gradient-to-r from-[#DD087F] to-[#008ED6] hover:opacity-90 transition-all duration-300"
@@ -418,7 +423,6 @@ export default function Home() {
       </section>
 
       <WhatsappButton />
-      {/* Footer */}
       <Footer />
     </div>
   );

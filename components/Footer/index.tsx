@@ -13,30 +13,33 @@ const Footer = () => {
         <p className="mt-2 text-sm text-muted-foreground">
           Bringing your ideas to life with high-quality prints.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Your One-Stop Printing Solution, PAN India! From digital to large-format printing, fast turnaround, no strict MOQ & custom designs!
+        </p>
 
         {/* Social Media Links */}
         <div className="flex justify-center gap-2 sm:gap-6 mt-4">
-  {[
-    { icon: <FaFacebookF size={18} />, link: "https://www.facebook.com/profile.php?id=61559305701688&mibextid=ZbWKwL" },
-    { icon: <FaInstagram size={18} />, link: "https://www.instagram.com/pixelprintstudios7/" },
-    { icon: <FaLinkedinIn size={18} />, link: "https://www.linkedin.com/in/pixel-print-studios/" },
-    { icon: <FaYoutube size={18} />, link: "https://www.youtube.com/@PixelPrintStudios" },
-    { icon: <FaEnvelope size={18} />, link: "mailto:pixelprintstudios7@gmail.com" },
-    { icon: <FaGoogle size={18} />, link: "https://g.co/kgs/5U6sJAH" }
-  ].map(({ icon, link }, index) => (
-    <motion.a
-      key={index}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-3 bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/30 transition"
-      whileHover={{ scale: 1.2, rotate: 5 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      {icon}
-    </motion.a>
-  ))}
-</div>
+          {[
+            { icon: <FaFacebookF size={18} />, link: "https://www.facebook.com/profile.php?id=61559305701688&mibextid=ZbWKwL" },
+            { icon: <FaInstagram size={18} />, link: "https://www.instagram.com/pixelprintstudios7/" },
+            { icon: <FaLinkedinIn size={18} />, link: "https://www.linkedin.com/in/pixel-print-studios/" },
+            { icon: <FaYoutube size={18} />, link: "https://www.youtube.com/@PixelPrintStudios" },
+            { icon: <FaEnvelope size={18} />, link: "mailto:pixelprintstudios7@gmail.com" },
+            { icon: <FaGoogle size={18} />, link: "https://g.co/kgs/5U6sJAH" }
+          ].map(({ icon, link }, index) => (
+            <motion.a
+              key={index}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/30 transition"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {icon}
+            </motion.a>
+          ))}
+        </div>
 
 
         {/* Back to Top Button with Infinite Animation */}
@@ -53,10 +56,10 @@ const Footer = () => {
         <p className="mt-6 text-xs text-muted-foreground">© 2025 Pixel Print Studios. All rights reserved.</p>
         <p className="mt-1 text-xs text-muted-foreground hover:opacity-100 transition">
           Created with ❤️ by {" "}
-          <a 
-            href="https://karanvirsingh011998.github.io/portfolio/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://karanvirsingh011998.github.io/portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-primary font-bold hover:underline transition"
           >
             Karan
