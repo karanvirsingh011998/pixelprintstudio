@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,6 +36,19 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/assets/images/logo.png" />
       </head>
       <body className={inter.className}>
+        {/* Google Analytics (GA4) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-31E1VVGF7H"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-31E1VVGF7H');
+          `}
+        </Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
