@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <title>Pixel Print Studios | Best Printing Services in Chandigarh</title>
         <meta name="description" content="We offer top-quality printing services for businesses and individuals. Get high-quality prints at affordable prices." />
-
+        <meta name="google-site-verification" content="JX4ozj1vqYexi_9ZamZ_CTDABDdeZMvE00XsMRwGSTo" />
         {/* Meta Keywords */}
         <meta
           name="keywords"
