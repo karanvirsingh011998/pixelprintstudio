@@ -91,13 +91,20 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801] opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
-            <Image
-              src="/assets/images/logo.png"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="mx-auto"
-            />
+            <motion.div
+              animate={{
+                scale: [1, 1.1, 1],
+                transition: { duration: 1.5, repeat: Infinity },
+              }}
+            >
+              <Image
+                src="/assets/images/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="mx-auto"
+              />
+            </motion.div>
 
             <h1 className="text-4xl sm:text-8xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#DD087F] via-[#008ED6] to-[#FFE801]">
               Pixel Print Studios
@@ -115,7 +122,15 @@ export default function Home() {
             </p>
 
             <p className="text-sm sm:text-xl text-muted-foreground">
-              Looking for top-quality printing in Chandigarh? We’ve got you covered! At our printing service, we combine cutting-edge technology with expert craftsmanship to deliver flawless prints—whether it’s business cards, banners, or custom projects. No matter your needs, we ensure precision, quality, and complete satisfaction. Whether you're a business aiming to stand out or an individual with unique printing requirements, we bring your vision to life with unmatched expertise. Experience printing perfection with us—where your ideas meet exceptional quality!
+              Looking for top-quality printing in Chandigarh? We’ve got you
+              covered! At our printing service, we combine cutting-edge
+              technology with expert craftsmanship to deliver flawless
+              prints—whether it’s business cards, banners, or custom projects.
+              No matter your needs, we ensure precision, quality, and complete
+              satisfaction. Whether you're a business aiming to stand out or an
+              individual with unique printing requirements, we bring your vision
+              to life with unmatched expertise. Experience printing perfection
+              with us—where your ideas meet exceptional quality!
             </p>
 
             <Button
@@ -349,16 +364,19 @@ export default function Home() {
 
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Special Offers & Discounts</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Special Offers & Discounts
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
             {/* Offer Card 1 */}
             <Card className="bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-center">
-                <h3 className="text-2xl font-semibold text-[#DD087F]">10% OFF Your First Order!</h3>
+                <h3 className="text-2xl font-semibold text-[#DD087F]">
+                  10% OFF Your First Order!
+                </h3>
                 <p className="mt-4 text-lg text-muted-foreground">
                   Get 10% off your first print order.
-
                   {/* Use code: <span className="font-bold text-[#008ED6]">WELCOME10</span> */}
                 </p>
                 {/* <Button
@@ -373,7 +391,9 @@ export default function Home() {
             {/* Offer Card 2 */}
             <Card className="bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="text-center">
-                <h3 className="text-2xl font-semibold text-[#FFE801]">Bulk Order Discount</h3>
+                <h3 className="text-2xl font-semibold text-[#FFE801]">
+                  Bulk Order Discount
+                </h3>
                 <p className="mt-4 text-lg text-muted-foreground">
                   Ordering in bulk? Get up to 20% off on large orders.
                   {/* Use code: <span className="font-bold text-[#DD087F]">BULK20</span> */}
@@ -391,9 +411,12 @@ export default function Home() {
           {/* Limited-time Banner */}
           <Card className="mt-4 bg-white dark:bg-gray-800 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="text-center">
-              <h3 className="text-2xl font-semibold text-[#DD087F]">Limited Time Offer!</h3>
+              <h3 className="text-2xl font-semibold text-[#DD087F]">
+                Limited Time Offer!
+              </h3>
               <p className="mt-4 text-lg text-muted-foreground">
-                Get an additional 5% off on all orders above ₹2000. Hurry, offer ends soon!
+                Get an additional 5% off on all orders above ₹2000. Hurry, offer
+                ends soon!
               </p>
               {/* <Button
                 size="lg"
